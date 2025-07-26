@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Career Quiz</h2>
+<form method="post" action="/api/responses/">
+    <!-- Example MCQ -->
+    <label for="age">Age:</label>
+    <input type="number" name="age" id="age" required><br><br>
+    <label for="education">Education:</label>
+    <select name="education" id="education">
+        <option value="0">High School</option>
+        <option value="1">Bachelor's</option>
+        <option value="2">Master's</option>
+    </select><br><br>
+    <label for="skills">Skills (semicolon separated):</label>
+    <input type="text" name="skills" id="skills"><br><br>
+    <label for="interests">Interests (semicolon separated):</label>
+    <input type="text" name="interests" id="interests"><br><br>
+    <button type="submit">Submit Quiz</button>
+</form>
+{% endblock %}

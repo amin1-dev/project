@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Dashboard</h2>
+<p>Welcome, {{ user.username }}!</p>
+<h3>Your Career Recommendations</h3>
+<ul>
+    {% for rec in recommendations %}
+    <li>{{ rec.top_careers }} (Scores: {{ rec.scores }}) <a href="/api/download_report/">Download PDF</a></li>
+    {% endfor %}
+</ul>
+<h3>Analytics (Coming Soon)</h3>
+<div id="analytics">
+    <!-- Placeholder for charts -->
+</div>
+{% endblock %}
